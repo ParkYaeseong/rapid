@@ -11,7 +11,7 @@ from stored structure-prediction results. The design pipeline itself is not incl
     .venv-repro/bin/pip install -r requirements-repro.txt
     PYTHON=.venv-repro/bin/python3 bash scripts/reproduce_paper_tables_figures.sh
 
-The script re-runs eight analyses and compares every value with the committed
+The script re-runs eleven analyses and compares every value with the committed
 results in `public_data/benchmark/gate0/` (relative tolerance 1e-9). Figures go to
 `figures/submission/`. No GPU or network access is needed.
 
@@ -32,7 +32,7 @@ MIT (see `LICENSE`).
 
 This release is archived on Zenodo.
 
-- Version DOI (v1.1.0, used for the manuscript results): 10.5281/zenodo.23354646
+- Version DOI (v1.2.0, used for the manuscript results): see the Zenodo record below
 - Concept DOI (always resolves to the latest version): 10.5281/zenodo.23354645
 
 Record: https://zenodo.org/records/23354646
