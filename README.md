@@ -1,5 +1,7 @@
 # RAPID: analysis reproduction package
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23354645.svg)](https://doi.org/10.5281/zenodo.23354645)
+
 Code and data to reproduce the numbers, tables and figures of the RAPID manuscript
 from stored structure-prediction results. The design pipeline itself is not included.
 
@@ -25,3 +27,13 @@ to install it and re-score the grids.
 ## License
 
 MIT (see `LICENSE`).
+
+## Citation
+
+This release is archived on Zenodo.
+
+- Version DOI (v1.1.0, used for the manuscript results): 10.5281/zenodo.23354646
+- Concept DOI (always resolves to the latest version): 10.5281/zenodo.23354645
+
+Record: https://zenodo.org/records/23354646
+See `CITATION.cff` for the full citation metadata.

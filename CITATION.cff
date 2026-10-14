@@ -5,6 +5,14 @@ version: "1.1.0"
 date-released: "2026-10-14"
 license: MIT
 repository-code: "https://github.com/ParkYaeseong/rapid"
+doi: "10.5281/zenodo.23354645"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23354645"
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.23354646"
+    description: "Version DOI (v1.1.0)"
 authors:
   - family-names: Park
     given-names: Yaeseong
