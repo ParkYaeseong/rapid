@@ -1,0 +1,16 @@
+{
+  "title": "RAPID: analysis reproduction package",
+  "upload_type": "software",
+  "version": "1.1.0",
+  "description": "Code and data to reproduce the analyses of the RAPID manuscript from stored structure-prediction results. Solubility scores use SoluProt 1.0.1.0.",
+  "creators": [
+    {"name": "Park, Yaeseong",
+     "affiliation": "Korea Research Institute of Bioscience and Biotechnology (KRIBB)",
+     "orcid": "0009-0004-5318-2423"}
+  ],
+  "license": "MIT",
+  "keywords": ["protein design", "structure prediction", "reproducibility"],
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.20619413", "relation": "isDerivedFrom", "scheme": "doi"}
+  ]
+}

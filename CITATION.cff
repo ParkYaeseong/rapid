@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the associated manuscript and this archived release."
+title: "RAPID: analysis reproduction package"
+version: "1.1.0"
+date-released: "2026-10-14"
+license: MIT
+repository-code: "https://github.com/ParkYaeseong/rapid"
+authors:
+  - family-names: Park
+    given-names: Yaeseong
+    orcid: "https://orcid.org/0009-0004-5318-2423"
+    affiliation: "Korea Research Institute of Bioscience and Biotechnology (KRIBB)"

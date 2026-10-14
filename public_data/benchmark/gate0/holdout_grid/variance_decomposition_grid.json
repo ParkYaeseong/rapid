@@ -1,0 +1,289 @@
+{
+  "purpose": "동결된 variance_decomposition_plan 집행 (균형 격자 코호트)",
+  "frozen_spec": "public_data/benchmark/gate0/holdout_experiment_spec.json",
+  "cohort_description": "yield-unselected, QC-eligible balanced cohort",
+  "why_not_unselected": "yield 를 보고 고르지는 않았다 - 이 타겟들은 게이트 0 을 통과한 적이 없어 볼 yield 가 존재하지 않았다. 다만 RFD3 백본은 2.0 A 수용 게이트와 구조 적격성을 통과해야 했다.",
+  "cohorts": {
+    "rfd3_only_primary": {
+      "n_designs": 1440,
+      "n_targets": 12,
+      "n_backbones": 60,
+      "dropped": {
+        "native 제외": 288
+      },
+      "sum_of_squares": {
+        "structural_pass": {
+          "target_level": 0.417,
+          "backbone_within_target": 0.2189,
+          "sequence_within_backbone": 0.3641,
+          "attributed_to_target_and_backbone": 0.6359,
+          "n": 1440,
+          "mean": 0.6674
+        },
+        "joint_pass": {
+          "target_level": 0.418,
+          "backbone_within_target": 0.2139,
+          "sequence_within_backbone": 0.3681,
+          "attributed_to_target_and_backbone": 0.6319,
+          "n": 1440,
+          "mean": 0.6604
+        },
+        "plddt": {
+          "target_level": 0.5036,
+          "backbone_within_target": 0.1556,
+          "sequence_within_backbone": 0.3408,
+          "attributed_to_target_and_backbone": 0.6592,
+          "n": 1440,
+          "mean": 86.8722
+        },
+        "rmsd_nonloop_order": {
+          "target_level": 0.4007,
+          "backbone_within_target": 0.1181,
+          "sequence_within_backbone": 0.4812,
+          "attributed_to_target_and_backbone": 0.5188,
+          "n": 1440,
+          "mean": 2.3976
+        }
+      },
+      "mixed_model": {
+        "plddt": {
+          "formula": "plddt ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "variance": {
+            "target": 53.838368,
+            "backbone_within_target": 16.111734,
+            "residual_sequence": 31.8746
+          },
+          "percent": {
+            "target": 0.5287,
+            "backbone_within_target": 0.1582,
+            "residual_sequence": 0.313
+          },
+          "attributed_to_target_and_backbone": 0.687,
+          "length_stratum_fixed_effects": {
+            "Intercept": 85.3271,
+            "C(length_stratum)[T.250-400]": 1.1307,
+            "C(length_stratum)[T.50-150]": 3.5048
+          },
+          "converged": true,
+          "n": 1440
+        },
+        "rmsd_nonloop_order": {
+          "formula": "rmsd_nonloop_order ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "variance": {
+            "target": 3.920663,
+            "backbone_within_target": 1.175638,
+            "residual_sequence": 4.65969
+          },
+          "percent": {
+            "target": 0.4019,
+            "backbone_within_target": 0.1205,
+            "residual_sequence": 0.4776
+          },
+          "attributed_to_target_and_backbone": 0.5224,
+          "length_stratum_fixed_effects": {
+            "Intercept": 2.9131,
+            "C(length_stratum)[T.250-400]": 0.0386,
+            "C(length_stratum)[T.50-150]": -1.5851
+          },
+          "converged": true,
+          "n": 1440
+        },
+        "structural_pass": {
+          "formula": "structural_pass ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "scale": "latent logit",
+          "variance": {
+            "target": 8.0746,
+            "backbone_within_target": 3.8465,
+            "residual_assumed_pi2_over_3": 3.2899
+          },
+          "percent": {
+            "target": 0.5308,
+            "backbone_within_target": 0.2529,
+            "residual_sequence": 0.2163
+          },
+          "attributed_to_target_and_backbone": 0.7837,
+          "caveat": "잔차를 pi^2/3 로 고정한 잠재 척도 분해다. 제곱합 분해의 백분율과 같은 양이 아니므로 직접 비교하지 않는다.",
+          "fit": "variational Bayes (fit_vb)",
+          "n": 1440
+        },
+        "joint_pass": {
+          "formula": "joint_pass ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "scale": "latent logit",
+          "variance": {
+            "target": 8.0981,
+            "backbone_within_target": 3.7477,
+            "residual_assumed_pi2_over_3": 3.2899
+          },
+          "percent": {
+            "target": 0.535,
+            "backbone_within_target": 0.2476,
+            "residual_sequence": 0.2174
+          },
+          "attributed_to_target_and_backbone": 0.7826,
+          "caveat": "잔차를 pi^2/3 로 고정한 잠재 척도 분해다. 제곱합 분해의 백분율과 같은 양이 아니므로 직접 비교하지 않는다.",
+          "fit": "variational Bayes (fit_vb)",
+          "n": 1440
+        }
+      }
+    },
+    "native_inclusive_sensitivity": {
+      "n_designs": 1680,
+      "n_targets": 12,
+      "n_backbones": 70,
+      "dropped": {
+        "지표 거부 (target)": 48
+      },
+      "sum_of_squares": {
+        "structural_pass": {
+          "target_level": 0.4316,
+          "backbone_within_target": 0.2459,
+          "sequence_within_backbone": 0.3226,
+          "attributed_to_target_and_backbone": 0.6774,
+          "n": 1680,
+          "mean": 0.6589
+        },
+        "joint_pass": {
+          "target_level": 0.4346,
+          "backbone_within_target": 0.2412,
+          "sequence_within_backbone": 0.3242,
+          "attributed_to_target_and_backbone": 0.6758,
+          "n": 1680,
+          "mean": 0.6524
+        },
+        "plddt": {
+          "target_level": 0.4123,
+          "backbone_within_target": 0.3034,
+          "sequence_within_backbone": 0.2843,
+          "attributed_to_target_and_backbone": 0.7157,
+          "n": 1680,
+          "mean": 86.5762
+        },
+        "rmsd_nonloop_order": {
+          "target_level": 0.3362,
+          "backbone_within_target": 0.2596,
+          "sequence_within_backbone": 0.4042,
+          "attributed_to_target_and_backbone": 0.5958,
+          "n": 1680,
+          "mean": 2.559
+        }
+      },
+      "mixed_model": {
+        "plddt": {
+          "formula": "plddt ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "variance": {
+            "target": 54.366057,
+            "backbone_within_target": 37.953316,
+            "residual_sequence": 31.777064
+          },
+          "percent": {
+            "target": 0.4381,
+            "backbone_within_target": 0.3058,
+            "residual_sequence": 0.2561
+          },
+          "attributed_to_target_and_backbone": 0.7439,
+          "length_stratum_fixed_effects": {
+            "Intercept": 84.4897,
+            "C(length_stratum)[T.250-400]": 2.8058,
+            "C(length_stratum)[T.50-150]": 2.8921
+          },
+          "converged": true,
+          "n": 1680
+        },
+        "rmsd_nonloop_order": {
+          "formula": "rmsd_nonloop_order ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "variance": {
+            "target": 4.259943,
+            "backbone_within_target": 3.470745,
+            "residual_sequence": 4.947067
+          },
+          "percent": {
+            "target": 0.336,
+            "backbone_within_target": 0.2738,
+            "residual_sequence": 0.3902
+          },
+          "attributed_to_target_and_backbone": 0.6098,
+          "length_stratum_fixed_effects": {
+            "Intercept": 3.167,
+            "C(length_stratum)[T.250-400]": -0.3257,
+            "C(length_stratum)[T.50-150]": -1.3999
+          },
+          "converged": true,
+          "n": 1680
+        },
+        "structural_pass": {
+          "formula": "structural_pass ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "scale": "latent logit",
+          "variance": {
+            "target": 10.0918,
+            "backbone_within_target": 4.9412,
+            "residual_assumed_pi2_over_3": 3.2899
+          },
+          "percent": {
+            "target": 0.5508,
+            "backbone_within_target": 0.2697,
+            "residual_sequence": 0.1796
+          },
+          "attributed_to_target_and_backbone": 0.8204,
+          "caveat": "잔차를 pi^2/3 로 고정한 잠재 척도 분해다. 제곱합 분해의 백분율과 같은 양이 아니므로 직접 비교하지 않는다.",
+          "fit": "variational Bayes (fit_vb)",
+          "n": 1680
+        },
+        "joint_pass": {
+          "formula": "joint_pass ~ C(length_stratum) + (1|target) + (1|target:backbone)",
+          "scale": "latent logit",
+          "variance": {
+            "target": 10.1474,
+            "backbone_within_target": 4.8849,
+            "residual_assumed_pi2_over_3": 3.2899
+          },
+          "percent": {
+            "target": 0.5538,
+            "backbone_within_target": 0.2666,
+            "residual_sequence": 0.1796
+          },
+          "attributed_to_target_and_backbone": 0.8204,
+          "caveat": "잔차를 pi^2/3 로 고정한 잠재 척도 분해다. 제곱합 분해의 백분율과 같은 양이 아니므로 직접 비교하지 않는다.",
+          "fit": "variational Bayes (fit_vb)",
+          "n": 1680
+        }
+      }
+    }
+  },
+  "how_to_state_this": {
+    "correct": "이 균형 코호트의 제곱합 분해에서 63.6% 가 타겟 및 백본 수준 차이에 귀속되었다",
+    "incorrect": "구조 성공의 64% 가 백본 수준에서 결정된다",
+    "why": "분산 분해는 관측된 코호트의 귀속이지 인과적 결정이 아니다"
+  },
+  "result_roles": {
+    "primary": {
+      "cohort": "RFD3 전용 균형 (전향 홀드아웃, 미지 타겟)",
+      "values": {
+        "target": 0.417,
+        "backbone_within_target": 0.2189,
+        "sequence_within_backbone": 0.3641
+      },
+      "attributed_to_target_and_backbone": 0.6359,
+      "why_primary": "타겟 -> 백본 -> 서열이 완전 균형이고 source 가 상수이며, yield 를 보고 고른 것이 없다."
+    },
+    "supplementary_consistency": {
+      "cohort": "온도 패널 (20 타겟). 패널 2 가 중간 yield 백본을 선별해 구성됐다.",
+      "values": {
+        "target": 0.495,
+        "backbone_within_target": 0.147,
+        "sequence_within_backbone": 0.358
+      },
+      "attributed_to_target_and_backbone": 0.642,
+      "role": "consistency check - 주 결과를 대체하거나 보강하는 독립 증거가 아니라, 선별이 결론을 만들지 않았는지 보는 대조다.",
+      "reading": "선별된 코호트 64.2% 와 균형 코호트 63.6% 가 가깝다. 선별을 걷어내도 귀속이 거의 그대로라는 뜻이고, 따라서 주 결과가 패널 2 의 구성 방식에서 나온 것이 아니다.",
+      "do_not_write": "두 값을 독립 반복으로 제시하면 안 된다. 코호트가 다르고 한쪽은 선별돼 있다."
+    }
+  },
+  "limits": [
+    "타겟 12 개다. 분산성분 추정의 불확실성이 그만큼 크다 - 특히 타겟 수준 성분은 클러스터 12 개로 추정한 것이라 점추정을 좁게 읽으면 안 된다. 이 한계는 코호트를 균형으로 바꿔도 없어지지 않는다.",
+    "생성 조건은 T=0.1 하나다. 조건 수준 변이는 이 분해에 없다.",
+    "RFD3 백본은 2.0 A 수용 게이트를 통과한 것들이다 - 기각된 백본의 변이는 관측되지 않는다.",
+    "이진 endpoint 의 혼합모형은 잠재 로짓 척도이고 잔차가 pi^2/3 로 고정이다. 제곱합 백분율과 같은 양이 아니다."
+  ],
+  "code_sha": "206ad78acd0667926689438ad647de28282a6dbd",
+  "utc": "2026-09-09T00:48:42Z"
+}
