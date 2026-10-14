@@ -32,8 +32,8 @@ MIT (see `LICENSE`).
 
 This release is archived on Zenodo.
 
-- Version DOI (v1.2.2, used for the manuscript results): 10.5281/zenodo.23358115
+- Version DOI (v1.3.0, used for the manuscript results): 10.5281/zenodo.23359985
 - Concept DOI (always resolves to the latest version): 10.5281/zenodo.23354645
 
-Record: https://zenodo.org/records/23358115
+Record: https://zenodo.org/records/23359985
 See `CITATION.cff` for the full citation metadata.
