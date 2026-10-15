@@ -11,8 +11,8 @@ identifiers:
     value: "10.5281/zenodo.23354645"
     description: "Concept DOI (all versions)"
   - type: doi
-    value: "10.5281/zenodo.23382829"
-    description: "Version DOI (v1.3.3)"
+    value: "10.5281/zenodo.23384181"
+    description: "Version DOI (v1.3.4)"
 authors:
   - family-names: Park
     given-names: Yaeseong
