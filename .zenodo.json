@@ -1,7 +1,7 @@
 {
   "title": "RAPID: analysis reproduction package",
   "upload_type": "software",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Code and data to reproduce the analyses of the RAPID manuscript from stored structure-prediction results. Solubility scores use SoluProt 1.0.1.0 (TMHMM-independent model). The reproduction script re-runs eleven analyses and compares 16,035 values with the committed results.",
   "creators": [
     {
