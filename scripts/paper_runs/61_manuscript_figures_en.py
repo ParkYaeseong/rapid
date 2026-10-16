@@ -272,8 +272,8 @@ def fig3_structural_context():
     ax.grid(axis="x", alpha=.22, lw=.6)
 
     fig.suptitle("Structural context, three arms, 9 CATH targets\n"
-                 "Diversity rises over a single backbone, but the surrogate\n"
-                 "does not beat random selection within the ensemble",
+                 "Diversity rises over a single backbone, but within the ensemble the\n"
+                 "surrogate shows no clear diversity advantage over random selection",
                  fontsize=9.6, fontweight="bold", y=1.03)
     save(fig, "fig3_structural_context")
 
@@ -348,9 +348,9 @@ def fig4_allocation():
                  fontweight="bold", loc="left")
     ax.grid(axis="y", alpha=.22, lw=.6)
 
-    fig.suptitle("Experiment 3 · RFD3 confirmatory · B=80\n"
-                 "Adding backbone allocation on top of sequence ranking does not\n"
-                 "increase yield, and narrows the spread",
+    fig.suptitle("Initial backbone-allocation pilot · RFD3 · B=80\n"
+                 "Adding backbone allocation on top of sequence ranking shows no\n"
+                 "clear additional yield, and narrows the spread",
                  fontsize=9.6, fontweight="bold", y=1.00)
     save(fig, "fig4_allocation")
 
@@ -418,7 +418,7 @@ def fig5_depth():
     h = [plt.Line2D([], [], color=BLUE, lw=1.6, marker="o", ms=5, label="D increases with depth"),
          plt.Line2D([], [], color=ORANGE, lw=1.6, marker="o", ms=5, label="D decreases with depth")]
     axes[1].legend(handles=h, loc="upper right", fontsize=8, frameon=False)
-    fig.suptitle("Depth-extension pilot · RFD3 confirmatory\n"
+    fig.suptitle("Depth-extension pilot · RFD3\n"
             f"B=80 · {len(con['greedy_fill|B80']['per_unit_delta'])} eligible units",
                  fontsize=9.6, fontweight="bold", y=1.04)
     fig.tight_layout()

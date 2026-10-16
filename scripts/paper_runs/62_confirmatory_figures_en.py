@@ -454,9 +454,8 @@ def fig10_stop_diagnosis():
 
     lcb = e.get("guardrail_nostop_lcb95", float("nan"))
     thr = e.get("threshold", .90)
-    fig.suptitle("The STOP rule fires when the policy reaches its own optimum "
-                 "— diagnostic, not a judgement\n"
-                 f"Removing it leaves EFBC unchanged; the guardrail LCB moves to "
+    fig.suptitle("STOP-rule diagnostics and exploratory removal analysis\n"
+                 f"Removing it shows no consistent EFBC change; the guardrail LCB moves to "
                  f"{lcb:.3f} against a {thr:.2f} threshold",
                  fontsize=9.4, fontweight="bold", y=1.14)
     save(fig, "fig10_stop_rule_diagnosis")
